@@ -1,0 +1,42 @@
+.blog-new{
+    .blog__title{
+        font-size: 2.5rem;
+        color: #000;
+        font-weight: 400;
+    }
+    .viewall{
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        &:hover{
+            color: #4F944F;
+        }
+    }
+    .viewall, .blog__view__icon{
+        color: #4F944F;
+    }
+    .post{
+        &__image{
+            width: 100%;
+            height: 180px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        &__time{
+            color: #6c757d;
+            font-size: 0.75rem;
+            margin: 10px 0;
+        }
+        &__title{
+            font-size: 1.3rem;
+            line-height: 1.25em;
+            & a{
+                color: #000;
+                &:hover{
+                    color: #4F944F;
+                }
+            }
+        }
+    }
+
+}

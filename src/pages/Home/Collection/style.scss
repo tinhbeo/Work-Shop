@@ -1,0 +1,98 @@
+.collection{
+    background-color: #3B416B;
+    &__text{
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.8;
+        font-size: 1rem;
+    }
+    &__images{
+        height: 600px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "h1 h2"
+        "h1 h3";
+        grid-gap: 10px;
+    }
+
+    &__card{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        &:hover .collection__image{
+            transform: scale(1);
+        }
+        &:hover .collection__arrow{
+            transform: translateX(100%);
+        }
+        &:first-child{
+            grid-area: h1;
+        }
+        &:nth-child(2){
+            grid-area: h2;
+        }
+        &:last-child{
+            grid-area: h3;
+        }
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__btn-group{
+        position: absolute;
+        bottom: 0;
+        margin: 2rem;
+    }
+    &__btn{
+        position: relative;
+        background-color: #fff;
+        display: inline-block;
+        color: #000;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        bottom: 0;
+        z-index: 2;
+    }
+    &__arrow{
+        position: absolute;
+        background-color: #fff;
+        display: inline-block;
+        padding: 1rem 1rem 1rem 0;
+        top: 0;
+        right: 0;
+        color: #000;
+        transition: 0.2s ease-in-out;
+        z-index: 1;
+    }
+}
+
+@media (max-width:991.98px) {
+    .collection__images{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .collection__card{
+        height: 600px;
+    }
+}
+@media (max-width:767.98px) {
+    .collection__card{
+        height: 400px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .collection__card{
+        height: 250px;
+    }
+}

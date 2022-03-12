@@ -1,0 +1,11 @@
+.images{
+    .image__slider{
+        height: 350px;
+        opacity: 0.8;
+        width: 100%;
+        object-fit: cover;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}

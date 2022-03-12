@@ -1,0 +1,14 @@
+.btn-link{
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 0.8rem 1.5rem;
+    color: #555;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0;
+    background-color: #fff;
+    &:hover{
+        background-color: #ddd;
+        color: #000;
+    }
+}
