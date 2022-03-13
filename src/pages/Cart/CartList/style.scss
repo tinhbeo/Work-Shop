@@ -13,4 +13,32 @@
     &__items{
         padding: 20px 0;
     }
+    &-checkout{
+       
+    }
+    .cart__detail{
+        padding: 20px;
+        .card-header{
+            padding: 0 1.875rem ;
+        }
+        .card-body{
+            padding: 1.875rem;    
+        }
+        .card-footer{
+            padding: 1rem 1.875rem;    
+        }
+        ul{
+            margin-bottom: 0;
+            list-style: none;
+            padding-left: 0;
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 0.625rem;
+                font-size: 0.875rem;
+                color: #555;
+            }
+        }
+    }
 }

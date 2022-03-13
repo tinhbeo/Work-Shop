@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import CartItem from '../../../components/CartItem';
 import './style.scss'
 function CartList(props) {
@@ -30,7 +31,38 @@ function CartList(props) {
                         </div>
                     </div>
                     <div className="col-lg-4">
-
+                        <div className="cart__detail">
+                            <div class="card text-dark bg-light mb-3">
+                                <div class="card-header py-3">
+                                    <p className='mb-0'>Order Summary</p>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <span>Subtotal</span>
+                                            <span>$418</span>
+                                        </li>
+                                        <li>
+                                            <span>Shipping</span>
+                                            <span>$418</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="card-footer">
+                                    <ul>
+                                        <li className='mb-0 fs-5'>
+                                            <span>Total</span>
+                                            <span>$418</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <NavLink
+                                to='#'
+                                className='btn btn-success w-100 py-3 text-uppercase' style={{ backgroundColor: '#4F944F', borderColor: '#4F944F' }}>
+                                checkout
+                            </NavLink>
+                        </div>
                     </div>
                 </div>
             </div>
