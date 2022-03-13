@@ -1,0 +1,16 @@
+.cart__list{
+    &-top{
+        padding-right:3.75rem;
+        span{
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: #555;
+        }
+    }
+
+    &__items{
+        padding: 20px 0;
+    }
+}

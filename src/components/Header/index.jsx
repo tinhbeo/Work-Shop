@@ -51,8 +51,10 @@ function Header(props) {
                       <span id='icon-search' onClick={() => setSearchUI(true)} className="nav-link"><i className="bi bi-search"></i></span>
                     </li>
                     <li className="nav-item">
-                      <span className="nav-link" role="button"
-                        aria-expanded="false"><i className="bi bi-bag"></i></span>
+                      <NavLink to='/cart'>
+                        <span className="nav-link" role="button"
+                          aria-expanded="false"><i className="bi bi-bag"></i></span>
+                      </NavLink>
                     </li>
                   </ul>
                 </div>

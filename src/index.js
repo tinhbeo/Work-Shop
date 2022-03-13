@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from './App';
 import './index.css';
+import Cart from './pages/Cart';
 import Category from './pages/Category';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
@@ -18,6 +19,7 @@ ReactDOM.render(
           <Route index path="/home" element={<Home />} />
           <Route path="/category" element={<Category />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
         <Route path='*' element={<NotFound />} />
       </Routes>
