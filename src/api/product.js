@@ -1,10 +1,15 @@
-const api = 'https://6226c9bc2dfa5240180d2202.mockapi.io/shop/products?page=1&limit=8';
-export async function getProducts() {
-    try {
-        const respone = await fetch(api);
-        const json = await respone.json();
-        return json
-    } catch (error) {
-        console.log(error);
+import axiosClient from './axiosClient';
+
+
+// api/productApi.js
+const productApi = {
+    getAll: (params) => {
+        const url = '/products';
+        return axiosClient.get(url, { params });
+    },
+    get: (id) => {
+        const url = `/products/${id}`;
+        return axiosClient.get(url);
     }
 }
+export default productApi;

@@ -1,21 +1,53 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Pagination from '../../components/Pagination';
 import Product from '../../components/Product';
 import SideBar from './SideBar';
-import './style.scss'
+import productApi from '../../api/product';
+import './style.scss';
 function Products(props) {
     const [products, setProducts] = useState([]);
+    const [total, setTotal] = useState(1);
+    const [filter, setFilter] = useState({
+        page: 1,
+        limit: 6
+    });
 
-    useState(() => {
+
+    useEffect(() => {
         async function getProducts() {
-            const api = 'https://6226c9bc2dfa5240180d2202.mockapi.io/shop/products?page=1&limit=9';
-            const respone = await fetch(api);
-            const data = await respone.json();
-            setProducts(data)
+            try {
+                const respone = await productApi.getAll(filter);
+                setProducts(respone);
+            } catch (error) {
+                console.log(error);
+            }
         }
-        getProducts()
-    }, [])
+        getProducts();
+    }, [filter]);
+
+    useEffect(() => {
+        async function getAllProducts() {
+            try {
+                const max = await productApi.getAll();
+                setTotal(max.length);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getAllProducts();
+    }, []);
+
+    function handlePageChange(newPage) {
+        if (newPage <= 0 || newPage > total) return;
+        setFilter(
+            {
+                ...filter,
+                page: newPage
+            }
+        )
+    }
+
     return (
         <div className='products'>
             <section className='top'>
@@ -37,7 +69,7 @@ function Products(props) {
                             <div className="row align-items-end">
                                 <div className="col-lg-6">
                                     <h1>Products</h1>
-                                    <span className='text-secondary text-uppercase lh-lg'>20 products</span>
+                                    <span className='text-secondary text-uppercase lh-lg'>{total} products</span>
                                 </div>
                                 <div className="col-lg-6 text-end">
                                     <div className="dropdown">
@@ -63,6 +95,7 @@ function Products(props) {
                                 {products.map((product) => (
                                     <div key={product.id} className="col-lg-4">
                                         <Product
+                                            id={product.id}
                                             image1={product.image1}
                                             image2={product.image2}
                                             name={product.name}
@@ -72,7 +105,7 @@ function Products(props) {
                             </div>
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <Pagination />
+                                    <Pagination totalProduct={total} pagination={filter} handlePageChange={handlePageChange} />
                                 </div>
                             </div>
                         </div>

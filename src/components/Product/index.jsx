@@ -4,7 +4,7 @@ import './style.scss'
 function Product(props) {
     return (
         <div className="product">
-            <NavLink to='/'>
+            <NavLink to={`/products/${props.id}`}>
                 <div className="product__image">
                     <img className="w-100"
                         src={props.image1} alt="..." />
@@ -14,7 +14,7 @@ function Product(props) {
             </NavLink>
             <div className=" mt-3 product__content">
                 <div className="d-flex justify-content-between">
-                    <NavLink to='/' className='product__title'>{props.name}</NavLink>
+                    <NavLink to={`/products/${props.id}`} className='product__title'>{props.name}</NavLink>
                     <i className="bi bi-heart-fill"></i>
                 </div>
                 <div>
