@@ -21,7 +21,7 @@ function LatestProduct(props) {
                 </div>
                 <div className="row">
                     {listProduct.map(product => (
-                        <div className="col-lg-3">
+                        <div key={product.id} className="col-lg-3">
                             <Product
                                 image1={product.image1}
                                 image2={product.image2}

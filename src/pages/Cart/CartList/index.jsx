@@ -32,11 +32,11 @@ function CartList(props) {
                     </div>
                     <div className="col-lg-4">
                         <div className="cart__detail">
-                            <div class="card text-dark bg-light mb-3">
-                                <div class="card-header py-3">
+                            <div className="card text-dark bg-light mb-3">
+                                <div className="card-header py-3">
                                     <p className='mb-0'>Order Summary</p>
                                 </div>
-                                <div class="card-body">
+                                <div className="card-body">
                                     <ul>
                                         <li>
                                             <span>Subtotal</span>

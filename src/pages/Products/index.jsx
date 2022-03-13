@@ -22,9 +22,9 @@ function Products(props) {
                 <div className="container">
                     <div className="row">
                         <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><NavLink className='text-dark underline' to='/home'>Home</NavLink></li>
-                                <li class="breadcrumb-item active" aria-current="page">Products</li>
+                            <ol className="breadcrumb">
+                                <li className="breadcrumb-item"><NavLink className='text-dark underline' to='/home'>Home</NavLink></li>
+                                <li className="breadcrumb-item active" aria-current="page">Products</li>
                             </ol>
                         </nav>
                     </div>
@@ -40,11 +40,11 @@ function Products(props) {
                                     <span className='text-secondary text-uppercase lh-lg'>20 products</span>
                                 </div>
                                 <div className="col-lg-6 text-end">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div className="dropdown">
+                                        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                             What's New
                                         </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                             <li><NavLink to='/' className="dropdown-item">Action</NavLink></li>
                                             <li><NavLink to='/' className="dropdown-item">Another action</NavLink></li>
                                             <li><NavLink to='/' className="dropdown-item">Something else here</NavLink></li>
@@ -61,7 +61,7 @@ function Products(props) {
                         <div className="col-lg-9">
                             <div className="row">
                                 {products.map((product) => (
-                                    <div className="col-lg-4">
+                                    <div key={product.id} className="col-lg-4">
                                         <Product
                                             image1={product.image1}
                                             image2={product.image2}

@@ -31,7 +31,7 @@ function FeaturedProducts(props) {
 
                 <div className="row">
                     {products.map(product => (
-                        <div className="col-12 col-md-6 col-lg-4 ">
+                        <div key={product.id} className="col-12 col-md-6 col-lg-4 ">
                             <Product image1={product.image1} image2={product.image2} name={product.name} price={product.price} />
                         </div>
                     ))}
