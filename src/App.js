@@ -12,15 +12,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Navigate replace to="/home" />} />
-        <Route path="/category" element={<Category />} />
-        <Route path="/products" element={<Products />} />
-        <Route path='/products/:id' element={<ProductDetail />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+      <div style={{ minHeight: '80vh' }}>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Navigate replace to="/home" />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/products" element={<Products />} />
+          <Route path='/products/:id' element={<ProductDetail />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );
