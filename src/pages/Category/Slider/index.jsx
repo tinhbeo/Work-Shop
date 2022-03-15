@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import 'swiper/scss';
 import ButtonLink from '../../../components/ButtonLink';
 import './style.scss';
@@ -24,8 +25,12 @@ function Slider(props) {
                         <h1 className='text-white'>Your perfect workspace is waiting for you.</h1>
                         <ButtonLink text='shop now' link='/' />
                     </div>
-                    <button className='category__slide__btn category__slide__btn-left'><i className="bi bi-arrow-left-short" /></button>
-                    <button className='category__slide__btn category__slide__btn-right'><i className="bi bi-arrow-right-short" /></button>
+                    <button className='category__slide__btn category__slide__btn-left'>
+                        <BsArrowLeft />
+                    </button>
+                    <button className='category__slide__btn category__slide__btn-right'>
+                        <BsArrowRight />
+                    </button>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -37,8 +42,12 @@ function Slider(props) {
                         <h1 className='text-white'>Transform your home with us.</h1>
                         <ButtonLink text='shop now' link='/' />
                     </div>
-                    <button className='category__slide__btn category__slide__btn-left'><i className="bi bi-arrow-left-short" /></button>
-                    <button className='category__slide__btn category__slide__btn-right'><i className="bi bi-arrow-right-short" /></button>
+                    <button className='category__slide__btn category__slide__btn-left'>
+                        <BsArrowLeft />
+                    </button>
+                    <button className='category__slide__btn category__slide__btn-right'>
+                        <BsArrowRight />
+                    </button>
                 </div>
             </SwiperSlide>
         </Swiper>

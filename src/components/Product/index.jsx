@@ -1,6 +1,7 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'
-import './style.scss'
+import { NavLink } from 'react-router-dom';
+import { AiFillHeart } from 'react-icons/ai';
+import './style.scss';
 function Product(props) {
     return (
         <div className="product">
@@ -15,7 +16,8 @@ function Product(props) {
             <div className=" mt-3 product__content">
                 <div className="d-flex justify-content-between">
                     <NavLink to={`/products/${props.id}`} className='product__title'>{props.name}</NavLink>
-                    <i className="bi bi-heart-fill"></i>
+                    {/* <i className="bi bi-heart-fill"></i> */}
+                    <AiFillHeart />
                 </div>
                 <div>
                     <span>${props.price}</span>

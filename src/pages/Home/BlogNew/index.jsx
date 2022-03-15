@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { BsArrowRightShort } from 'react-icons/bs';
 import './style.scss'
 function BlogNew(props) {
     return (
@@ -10,7 +11,7 @@ function BlogNew(props) {
                         <h2 className="blog__title">Blog Posts & News</h2>
                         <span>
                             <NavLink to='/' className="viewall">view all</NavLink>
-                            <i className="bi bi-arrow-right-short blog__view__icon"></i>
+                            <BsArrowRightShort className='blog__view__icon' />
                         </span>
                     </div>
                 </div>

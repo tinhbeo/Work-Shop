@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { BsArrowRight } from 'react-icons/bs';
 import './style.scss'
 function Collection(props) {
     return (
@@ -31,7 +32,7 @@ function Collection(props) {
                                     <span className="collection__btn">
                                         dresses
                                     </span>
-                                    <i className="bi bi-arrow-right collection__arrow"></i>
+                                    <span className='collection__arrow'><BsArrowRight /></span>
                                 </div>
                             </NavLink>
                         </div>
@@ -45,7 +46,7 @@ function Collection(props) {
                                     <span className="collection__btn">
                                         watches
                                     </span>
-                                    <i className="bi bi-arrow-right collection__arrow"></i>
+                                    <span className='collection__arrow'><BsArrowRight /></span>
                                 </div>
                             </NavLink>
                         </div>
@@ -59,7 +60,7 @@ function Collection(props) {
                                     <span className="collection__btn">
                                         sneakers
                                     </span>
-                                    <i className="bi bi-arrow-right collection__arrow"></i>
+                                    <span className='collection__arrow'><BsArrowRight /></span>
                                 </div>
                             </NavLink>
                         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
 import { Autoplay, Lazy, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -36,7 +37,7 @@ function Slider(props) {
                                 </h1>
                                 <NavLink to='/products' className="btn btn-arrow">
                                     Shop now
-                                    <span className="span-arrow"><i className="bi bi-arrow-right"></i></span>
+                                    <span className="span-arrow"><BsArrowRight /></span>
                                 </NavLink>
                             </div>
                         </div>
@@ -55,7 +56,7 @@ function Slider(props) {
                                 </h1>
                                 <NavLink to='/products' className="btn btn-arrow">
                                     Shop now
-                                    <span className="span-arrow"><i className="bi bi-arrow-right"></i></span>
+                                    <span className="span-arrow"><BsArrowRight /></span>
                                 </NavLink>
                             </div>
                         </div>
@@ -64,10 +65,10 @@ function Slider(props) {
             </SwiperSlide>
             <div className='slider__button__group'>
                 <button className="slider__button slider__button-prev">
-                    <i className="bi bi-arrow-left"></i>
+                    <BsArrowLeft />
                 </button>
                 <button className="slider__button slider__button-next">
-                    <i className="bi bi-arrow-right"></i>
+                    <BsArrowRight />
                 </button>
             </div>
         </Swiper>

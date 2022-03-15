@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { BsSearch } from 'react-icons/bs';
+import { BsBag } from 'react-icons/bs';
 import './style.scss'
 function Header(props) {
   const [searchUI, setSearchUI] = useState(false);
@@ -48,12 +50,15 @@ function Header(props) {
                     </li>
 
                     <li className="nav-item">
-                      <span id='icon-search' onClick={() => setSearchUI(true)} className="nav-link"><i className="bi bi-search"></i></span>
+                      <span
+                        id='icon-search'
+                        onClick={() => setSearchUI(true)}
+                        className="nav-link"><BsSearch /></span>
                     </li>
                     <li className="nav-item">
                       <NavLink to='/cart'>
                         <span className="nav-link" role="button"
-                          aria-expanded="false"><i className="bi bi-bag"></i></span>
+                          aria-expanded="false"><BsBag /></span>
                       </NavLink>
                     </li>
                   </ul>

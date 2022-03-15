@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { BsFacebook, BsTwitter, BsYoutube } from 'react-icons/bs';
 import './style.scss'
 function Footer(props) {
     return (
@@ -65,9 +66,9 @@ function Footer(props) {
                                 <div className="w-75">
                                     <p className="text-uppercase">folow us</p>
                                     <div className="contact__icons">
-                                        <NavLink to='/'><i className="bi bi-facebook"></i></NavLink>
-                                        <NavLink to='/'><i className="bi bi-twitter"></i></NavLink>
-                                        <NavLink to='/'><i className="bi bi-youtube"></i></NavLink>
+                                        <NavLink to='/'><BsFacebook /></NavLink>
+                                        <NavLink to='/'><BsTwitter /></NavLink>
+                                        <NavLink to='/'><BsYoutube /></NavLink>
                                     </div>
                                 </div>
                             </div>
