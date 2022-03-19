@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
 import { BsBag } from 'react-icons/bs';
 import './style.scss'
 function Header(props) {
   const [searchUI, setSearchUI] = useState(false);
-
+  const [render, setRender] = useState(true);
+  const location = useLocation();
+  const { pathname } = location;
+  useEffect(() => {
+    if (pathname === '/admin') {
+      setRender(false);
+    }
+  }, [pathname])
   return (
+    render &&
     <header className="header">
       <div className="container">
         <div className="row">

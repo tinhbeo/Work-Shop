@@ -1,9 +1,19 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { BsFacebook, BsTwitter, BsYoutube } from 'react-icons/bs';
 import './style.scss'
 function Footer(props) {
+    const [render, setRender] = useState(true);
+    const location = useLocation();
+    const { pathname } = location;
+    useEffect(() => {
+        if (pathname === '/admin') {
+            setRender(false);
+        }
+    }, [pathname])
+
     return (
+        render &&
         <footer className="text-white">
             <div className="container">
                 <div className="row">
