@@ -1,34 +1,35 @@
-.product{
-
-    & a.underline{
+.product {
+    & span.underline,
+    & a.underline {
         position: relative;
-        &::before{
-            content: '';
+        cursor: pointer;
+        &::before {
+            content: "";
             position: absolute;
             bottom: -2px;
             height: 0.5px;
             width: 0%;
             transition: 0.2s ease-in-out;
         }
-        &:hover:before{
+        &:hover:before {
             width: 100%;
         }
     }
     margin-bottom: 1rem;
-    &__title{
-        color:#555;
-        &:hover{
+    &__title {
+        color: #555;
+        &:hover {
             color: inherit;
         }
     }
-    &__add{
-        $color: #4F944F;
+    &__add {
+        $color: #4f944f;
         color: $color;
         opacity: 0;
         font-size: 0.8rem;
-        
-        &::before{
-            content: '';
+
+        &::before {
+            content: "";
             transition: all 0.3s ease-in-out;
             position: absolute;
             bottom: -2px;
@@ -37,11 +38,11 @@
             background-color: $color;
         }
     }
-    & span{
+    & span {
         margin-right: 10px;
     }
 
-    &__image{
+    &__image {
         position: relative;
         & img + img {
             position: absolute;
@@ -49,17 +50,12 @@
             left: 0;
             opacity: 0;
         }
-        &:hover img+img{
+        &:hover img + img {
             opacity: 1;
         }
     }
-    &__content{
-        i{
-            color: #4F944F;
-        }
-    }
-    &:hover &__add{
+    &:hover &__add {
         opacity: 1;
-        color: #4F944F;
+        color: #4f944f;
     }
 }

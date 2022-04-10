@@ -16,7 +16,6 @@ function LatestProduct(props) {
                 console.log(error);
             }
         }
-        console.log("call api category");
         getProducts();
     }, []);
     return (

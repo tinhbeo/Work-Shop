@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import CartItem from "components/CartItem";
 import "./style.scss";
+import { useSelector } from "react-redux";
 function CartList(props) {
+    const store = useSelector((state) => state.cart.store);
+    const total = store.reduce((prev, current) => {
+        return prev + current.quantity * current.price;
+    }, 0);
+
     return (
         <div className="cart__list">
             <div className="container">
@@ -27,7 +33,17 @@ function CartList(props) {
                 <div className="row">
                     <div className="col-lg-8">
                         <div className="cart__list__items">
-                            <CartItem />
+                            {store &&
+                                store.map((item) => (
+                                    <CartItem
+                                        id={item.id}
+                                        key={item.id}
+                                        image1={item.image1}
+                                        image2={item.image2}
+                                        price={item.price}
+                                        name={item.name}
+                                    />
+                                ))}
                         </div>
                     </div>
                     <div className="col-lg-4">
@@ -40,11 +56,11 @@ function CartList(props) {
                                     <ul>
                                         <li>
                                             <span>Subtotal</span>
-                                            <span>$418</span>
+                                            <span>${total}</span>
                                         </li>
                                         <li>
                                             <span>Shipping</span>
-                                            <span>$418</span>
+                                            <span>$0</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -52,7 +68,7 @@ function CartList(props) {
                                     <ul>
                                         <li className="mb-0 fs-5">
                                             <span>Total</span>
-                                            <span>$418</span>
+                                            <span>${total}</span>
                                         </li>
                                     </ul>
                                 </div>

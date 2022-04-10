@@ -1,4 +1,4 @@
-.btn-link{
+.btn__link {
     display: inline-block;
     border: 1px solid #ddd;
     padding: 0.8rem 1.5rem;
@@ -6,9 +6,9 @@
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 0;
-    background-color: #fff;
-    &:hover{
-        background-color: #ddd;
+    background-color: #fff !important;
+    &:hover {
+        background-color: #ddd !important;
         color: #000;
     }
 }
