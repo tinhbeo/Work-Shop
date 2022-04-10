@@ -1,10 +1,10 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import CartItem from '../../../components/CartItem';
-import './style.scss'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import CartItem from "components/CartItem";
+import "./style.scss";
 function CartList(props) {
     return (
-        <div className='cart__list'>
+        <div className="cart__list">
             <div className="container">
                 <div className="row mb-1">
                     <div className="col-lg-8">
@@ -34,7 +34,7 @@ function CartList(props) {
                         <div className="cart__detail">
                             <div className="card text-dark bg-light mb-3">
                                 <div className="card-header py-3">
-                                    <p className='mb-0'>Order Summary</p>
+                                    <p className="mb-0">Order Summary</p>
                                 </div>
                                 <div className="card-body">
                                     <ul>
@@ -50,7 +50,7 @@ function CartList(props) {
                                 </div>
                                 <div className="card-footer">
                                     <ul>
-                                        <li className='mb-0 fs-5'>
+                                        <li className="mb-0 fs-5">
                                             <span>Total</span>
                                             <span>$418</span>
                                         </li>
@@ -58,8 +58,13 @@ function CartList(props) {
                                 </div>
                             </div>
                             <NavLink
-                                to='#'
-                                className='btn btn-success w-100 py-3 text-uppercase' style={{ backgroundColor: '#4F944F', borderColor: '#4F944F' }}>
+                                to="#"
+                                className="btn btn-success w-100 py-3 text-uppercase"
+                                style={{
+                                    backgroundColor: "#4F944F",
+                                    borderColor: "#4F944F",
+                                }}
+                            >
                                 checkout
                             </NavLink>
                         </div>

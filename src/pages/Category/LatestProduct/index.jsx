@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import ButtonLink from '../../../components/ButtonLink';
-import Product from '../../../components/Product';
+import React, { useState } from "react";
+import ButtonLink from "components/ButtonLink";
+import Product from "components/Product";
 function LatestProduct(props) {
     const [listProduct, setListProducts] = useState([]);
 
     useState(() => {
         async function getProducts() {
             try {
-                const api = 'https://6226c9bc2dfa5240180d2202.mockapi.io/shop/products?page=1&limit=8';
+                const api =
+                    "https://6226c9bc2dfa5240180d2202.mockapi.io/shop/products?page=1&limit=8";
                 const respone = await fetch(api);
                 const data = await respone.json();
                 setListProducts(data);
@@ -15,29 +16,30 @@ function LatestProduct(props) {
                 console.log(error);
             }
         }
-        console.log('call api category');
+        console.log("call api category");
         getProducts();
-    }, [])
+    }, []);
     return (
-        <section className='pt-0'>
-            <div className='container'>
+        <section className="pt-0">
+            <div className="container">
                 <div className="row">
-                    <h2 className='text-center'>Latest Products</h2>
+                    <h2 className="text-center">Latest Products</h2>
                 </div>
                 <div className="row">
-                    {listProduct.map(product => (
+                    {listProduct.map((product) => (
                         <div key={product.id} className="col-lg-3">
                             <Product
                                 id={product.id}
                                 image1={product.image1}
                                 image2={product.image2}
                                 name={product.name}
-                                price={product.price} />
+                                price={product.price}
+                            />
                         </div>
                     ))}
                 </div>
                 <div className="row mt-3">
-                    <ButtonLink link='/products' text='load more' />
+                    <ButtonLink link="/products" text="load more" />
                 </div>
             </div>
         </section>
