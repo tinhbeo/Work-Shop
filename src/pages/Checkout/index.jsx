@@ -42,6 +42,7 @@ const Checkout = () => {
                 phone,
                 address,
                 items: store,
+                total,
             };
 
             orderApi.post(data).then(() => {
