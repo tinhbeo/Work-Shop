@@ -1,5 +1,8 @@
 import React from "react";
 import CategoryCard from "components/CategoryCard";
+import card1 from 'assets/image/card-1.jpg';
+import card2 from 'assets/image/card-2.jpg';
+import card3 from 'assets/image/card-3.jpg';
 import "./style.scss";
 function CategoryProducts(props) {
     const data = [
@@ -7,19 +10,19 @@ function CategoryProducts(props) {
             id: "1",
             link: "/123",
             text: "Kitchen & Dining",
-            image: "https://vendor.webuildthemes.com/assets/images/card-1.jpg",
+            image: card1,
         },
         {
             id: "2",
             link: "/123",
             text: "Living Room",
-            image: "https://vendor.webuildthemes.com/assets/images/card-2.jpg",
+            image: card2,
         },
         {
             id: "3",
             link: "/123",
             text: "Bathroom",
-            image: "https://vendor.webuildthemes.com/assets/images/card-3.jpg",
+            image: card3,
         },
     ];
 

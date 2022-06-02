@@ -49,6 +49,7 @@ function FeaturedProducts(props) {
                             className="col-12 col-md-6 col-lg-4 "
                         >
                             <Product
+                                id = {product.id}
                                 image1={product.image1}
                                 image2={product.image2}
                                 name={product.name}
@@ -58,7 +59,7 @@ function FeaturedProducts(props) {
                     ))}
                 </div>
                 <div className="mt-5 text-center">
-                    <ButtonLink text="load more" link="/" />
+                    <ButtonLink text="load more" link="/products" />
                 </div>
             </div>
         </section>

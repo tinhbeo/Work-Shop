@@ -1,3 +1,5 @@
+import imageSlide1 from 'assets/image/background-1.jpg';
+import imageSlide2 from 'assets/image/background-2.jpg';
 import React from 'react';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
@@ -27,7 +29,7 @@ function Slider(props) {
         >
             <SwiperSlide>
                 <div className="slider"
-                    style={{ backgroundImage: `url('https://vendor.webuildthemes.com/assets/images/background-2.jpg')` }}>
+                    style={{ backgroundImage: `url(${imageSlide1})` }}>
                     <div className="container">
                         <div className="row vh-100 align-items-center w-100">
                             <div className="slider__content">
@@ -46,7 +48,7 @@ function Slider(props) {
             </SwiperSlide>
             <SwiperSlide>
                 <div className="slider"
-                    style={{ backgroundImage: `url('https://vendor.webuildthemes.com/assets/images/background-1.jpg')` }}>
+                    style={{ backgroundImage: `url(${imageSlide2})` }}>
                     <div className="container">
                         <div className="row vh-100 align-items-center">
                             <div className="slider__content">

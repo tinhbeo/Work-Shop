@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { AiFillHeart } from "react-icons/ai";
-import "./style.scss";
-import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "features/addToCart/cartSlice";
+import React, { useEffect, useState } from "react";
+import { AiFillHeart } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+import "./style.scss";
 function Product(props) {
     const [inCart, setInCart] = useState(false);
     const store = useSelector((state) => state.cart.store);
+    const dispatch = useDispatch();
+
+    
     useEffect(() => {
         setInCart(store.some((item) => item.id === props.id));
-    }, [store]);
-    const dispatch = useDispatch();
+    },[store, props.id]);
+    
     const handleAddToCart = () => {
         dispatch(
             addProduct({

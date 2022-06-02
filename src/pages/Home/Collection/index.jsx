@@ -1,6 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BsArrowRight } from 'react-icons/bs';
+import look1 from 'assets/image/look-1.jpg';
+import look2 from 'assets/image/look-2.jpg';
+import look3 from 'assets/image/look-3.jpg';
 import './style.scss'
 function Collection(props) {
     return (
@@ -25,7 +28,7 @@ function Collection(props) {
                         <div className="collection__card">
                             <NavLink to='/'>
                                 <div className="collection__image"
-                                    style={{ backgroundImage: `url('https://vendor.webuildthemes.com/assets/images/look-1.jpg')` }}>
+                                    style={{ backgroundImage: `url(${look1})` }}>
                                 </div>
 
                                 <div className="collection__btn-group">
@@ -39,7 +42,7 @@ function Collection(props) {
                         <div className="collection__card">
                             <NavLink to='/'>
                                 <div className="collection__image"
-                                    style={{ backgroundImage: `url('https://vendor.webuildthemes.com/assets/images/look-2.jpg')` }}>
+                                    style={{ backgroundImage: `url(${look2})` }}>
                                 </div>
 
                                 <div className="collection__btn-group">
@@ -53,7 +56,7 @@ function Collection(props) {
                         <div className="collection__card">
                             <NavLink to='/'>
                                 <div className="collection__image"
-                                    style={{ backgroundImage: `url('https://vendor.webuildthemes.com/assets/images/look-3.jpg')` }}>
+                                    style={{ backgroundImage: `url(${look3})` }}>
                                 </div>
 
                                 <div className="collection__btn-group">

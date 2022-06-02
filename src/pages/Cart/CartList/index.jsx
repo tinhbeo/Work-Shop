@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import CartItem from "components/CartItem";
-import "./style.scss";
+import React from "react";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+import "./style.scss";
 function CartList(props) {
     const store = useSelector((state) => state.cart.store);
     const total = store.reduce((prev, current) => {

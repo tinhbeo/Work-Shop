@@ -2,6 +2,8 @@ import React from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import imageSlide4 from 'assets/image/background-4.jpg';
+import imageSlide5 from 'assets/image/background-5.jpg';
 import "swiper/scss";
 import ButtonLink from "components/ButtonLink";
 import "./style.scss";
@@ -19,7 +21,7 @@ function Slider(props) {
                 <div
                     className="category__slide"
                     style={{
-                        backgroundImage: `url('https://vendor.webuildthemes.com/assets/images/background-4.jpg')`,
+                        backgroundImage: `url(${imageSlide4})`,
                     }}
                 >
                     <div className="category__slide__content">
@@ -40,7 +42,7 @@ function Slider(props) {
                 <div
                     className="category__slide"
                     style={{
-                        backgroundImage: `url('https://vendor.webuildthemes.com/assets/images/background-5.jpg')`,
+                        backgroundImage: `url(${imageSlide5})`,
                     }}
                 >
                     <div className="category__slide__content">

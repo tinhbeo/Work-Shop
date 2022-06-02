@@ -1,49 +1,44 @@
-.wrap{
+.loading{
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
-  bottom:0;
   right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,0.8);
-  z-index: 99;
-
-  .loading {
-    display: flex;
+  background-color: rgba(0,0,0,0.5);
+  .dots {
     width: 3.5em;
-    height: 3.5em;
-    border: 3px solid transparent;
-    border-top-color: #3cefff;
-    border-bottom-color: #3cefff;
-    border-radius: 50%;
-    animation: spin 1.5s linear infinite;
-    &:before{
-      content: '';
-    display: block;
-    margin: auto;
-    width: 0.75em;
-    height: 0.75em;
-    border: 3px solid #3cefff;
-    border-radius: 50%;
-    animation: pulse 1s alternate ease-in-out infinite;
-    }
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
   }
-
-  @keyframes spin {
+  
+  .dots div {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    background-color: #fc2f70;
+    animation: fade 0.8s ease-in-out alternate infinite;
+  }
+  
+  .dots div:nth-of-type(1) {
+    animation-delay: -0.4s;
+  }
+  
+  .dots div:nth-of-type(2) {
+    animation-delay: -0.2s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 1;
+    }
     to {
-      transform: rotate(360deg);
+      opacity: 0;
     }
   }
   
-  @keyframes pulse {
-    from {
-      transform: scale(0.5);
-    }
-    to {
-      transform: scale(1);
-    }
-  }
-
 }
