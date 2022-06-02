@@ -1,0 +1,52 @@
+$breadcrumb-divider: quote('>');
+
+.checkout {
+    .top {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0;
+        padding-top: 7.5rem;
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: $breadcrumb-divider;
+        }
+        & a.underline {
+            position: relative;
+            &::before {
+                content: '';
+                transition: 0.3s ease-in-out;
+                position: absolute;
+                bottom: -2px;
+                height: 0.5px;
+                width: 0%;
+                background-color: #000;
+            }
+            &:hover:before {
+                width: 100%;
+            }
+        }
+    }
+    .order_detail {
+        padding: 20px;
+        .card-header {
+            padding: 0 1.875rem;
+        }
+        .card-body {
+            padding: 1.875rem;
+        }
+        .card-footer {
+            padding: 1rem 1.875rem;
+        }
+        ul {
+            margin-bottom: 0;
+            list-style: none;
+            padding-left: 0;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 0.625rem;
+                font-size: 0.875rem;
+                color: #555;
+            }
+        }
+    }
+}

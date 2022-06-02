@@ -1,8 +1,8 @@
-import CartItem from "components/CartItem";
-import React from "react";
-import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
-import "./style.scss";
+import CartItem from 'components/CartItem';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import './style.scss';
 function CartList(props) {
     const store = useSelector((state) => state.cart.store);
     const total = store.reduce((prev, current) => {
@@ -74,11 +74,11 @@ function CartList(props) {
                                 </div>
                             </div>
                             <NavLink
-                                to="#"
+                                to="/checkout"
                                 className="btn btn-success w-100 py-3 text-uppercase"
                                 style={{
-                                    backgroundColor: "#4F944F",
-                                    borderColor: "#4F944F",
+                                    backgroundColor: '#4F944F',
+                                    borderColor: '#4F944F',
                                 }}
                             >
                                 checkout

@@ -1,9 +1,10 @@
 import "bootstrap/dist/js/bootstrap.min.js";
-import Customer from "components/CustomerLayout";
 import AdminLayout from "components/AdminLayout";
+import Customer from "components/CustomerLayout";
 import Admin from "pages/Admin";
 import Cart from "pages/Cart";
 import Category from "pages/Category";
+import Checkout from "pages/Checkout";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
 import ProductDetail from "pages/ProductDetail";
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/products" element={<Products />} />
                     <Route path="/products/:id" element={<ProductDetail />} />
                     <Route path="/cart" element={<Cart />} />
+                    <Route path="/checkout" element={<Checkout />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
                 <Route element={<AdminLayout />}>

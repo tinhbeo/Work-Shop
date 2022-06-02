@@ -1,17 +1,15 @@
-import React, { useState } from "react";
-import ButtonLink from "components/ButtonLink";
-import Product from "components/Product";
-function LatestProduct(props) {
+import productApi from 'api/product';
+import ButtonLink from 'components/ButtonLink';
+import Product from 'components/Product';
+import React, { useState } from 'react';
+function LatestProduct() {
     const [listProduct, setListProducts] = useState([]);
 
     useState(() => {
         async function getProducts() {
             try {
-                const api =
-                    "https://6226c9bc2dfa5240180d2202.mockapi.io/shop/products?page=1&limit=8";
-                const respone = await fetch(api);
-                const data = await respone.json();
-                setListProducts(data);
+                const respone = await productApi.getAll({ limit: 8, page: 1 });
+                setListProducts(respone);
             } catch (error) {
                 console.log(error);
             }
