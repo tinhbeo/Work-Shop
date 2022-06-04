@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { deleteProduct, updateCart } from "features/addToCart/cartSlice";
 function CartItem(props) {
     const { id, image1, price, name } = props;
-    const [quantity, setQuantity] = useState(1);
+    const [quantity, setQuantity] = useState(props.quantity);
     const dispatch = useDispatch();
     const total = price * quantity;
     function handleQuantityChange(e) {

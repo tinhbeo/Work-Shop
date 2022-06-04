@@ -42,6 +42,7 @@ function CartList(props) {
                                         image2={item.image2}
                                         price={item.price}
                                         name={item.name}
+                                        quantity={item.quantity}
                                     />
                                 ))}
                         </div>
